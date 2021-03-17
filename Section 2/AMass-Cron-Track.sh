@@ -1,6 +1,8 @@
 #!/bin/bash
 #
 #make a directory for amass, like ~/Amass/target-name, and use that as the script dir
+#add to cron (crontab -e) like:
+#0 0 * * * /script/dir/script.sh (do not run this every hour! Do it every 24, as it could take hours to run
 if [[ $# -lt 2 ]] ; then
     echo 'Example usage'
 	echo 'script.sh DOMAIN.com /FULL/PATH/TO/SCRIPT/DIR    with no trailing "/"'
